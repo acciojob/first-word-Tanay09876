@@ -1,8 +1,11 @@
 function firstWord(s) {
-  // your code here
+  if (!s) return "";
+ 
+  const trimmed = s.trim();
+  const index = trimmed.indexOf(" ");
+  return index === -1 ? trimmed : trimmed.substring(0, index);
 }
 
-// Do not change the code below
 
 const s = prompt("Enter String:");
 alert(firstWord(s));
